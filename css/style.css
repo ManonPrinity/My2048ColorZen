@@ -1,0 +1,434 @@
+/* ---- mon css ---- */
+@font-face { font-family: Redressed; src: url("../fonts/Redressed.ttf") format("truetype");}
+
+html
+{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+ 	background: #d5d5d5;
+ 	font-family: Redressed, "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+ 	font-size: 18px; 
+}
+
+h1, h2, h3, h4, h5, h6, p { margin: 0px;}
+
+#promptDiv
+{
+	display: none;
+	position: absolute;
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+}
+#opacityDiv
+{
+	display: block;
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.7;
+}
+#promptHandler
+{
+	display: block;
+	position: absolute;
+	z-index: 6;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+#centerDiv
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: 0px;
+	height: 100%;
+}
+#prompt
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: 500px;
+	height: 250px;
+	border: 5px solid #7C5D91;
+	border-radius: 15%;
+	background: #D8BEE9;
+	text-align: center;
+}
+#prompt h2
+{
+	margin-top: 20px;
+	font-size: 64px;
+	color: #111;
+	text-shadow: 0px 0px 2px #6c466d;
+}
+#prompt p
+{
+	margin-top: 10px;
+	font-size: 32px;
+	color: #111;
+	text-shadow: 0px 0px 2px #6c466d;
+}
+#prompt input
+{
+	display: block;
+	width: 200px;
+	height: 40px;
+	margin: 30px auto 0px auto;
+	padding: 5px;
+	border: 3px solid #6c466d;
+	background: #9b6bba;
+	color: rgb(227, 216, 228);
+	font-family: Redressed;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+#mainHeader
+{
+	display: block;
+	position: fixed;
+	z-index: 3;
+	top: 0px;
+	width: 100%;
+	height: 175px;
+	border-bottom: 5px solid #7C5D91;
+	background: #D8BEE9;
+	text-align: center;
+}
+#mainHeader h1
+{
+	font-size: 5.5em;
+ 	color: #6c466d;
+ 	text-shadow: 2px 2px 3px #9b6bba;
+}
+#mainHeader h2
+{
+	line-height: 0.7em;
+	padding-left: 200px;
+	font-size: 2.5em;
+ 	color: #9b6bba;
+ 	text-shadow: 1px 1px 2px #6c466d;
+}
+
+#leftAside
+{
+	display: block;
+	position: fixed;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	width: 225px;
+	height: 100%;
+	border-right: 10px solid #d8bee9;
+	background: #7C5D91;
+	font-size: 0px;
+}
+#leftAside p
+{
+	margin-top: 180px;
+	text-align: center;
+	font-size: 40px;
+	color: #d8bee9;
+}
+#leftAside span
+{
+	display: inline-block;
+	vertical-align: top;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 24px;
+	font-size: 20px;
+	color: #d8bee9;
+}
+#leftAside .pseudo
+{
+	width: 115px;
+	padding-left: 10px;
+	text-align: left;
+	overflow: hidden;
+}
+#leftAside .score
+{
+	width: 90px;
+	padding-right: 10px;
+	text-align: right;
+}
+#resetButton
+{
+	display: block;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	width: 205px;
+	height: 40px;
+	padding: 5px;
+	border: 3px solid #6c466d;
+	background: #d8bee9;
+	color: #6c466d;
+	font-family: Redressed;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+#resetButton:hover
+{
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+#rightAside
+{
+	display: block;
+	position: fixed;
+	z-index: 2;
+	top: 0px;
+	right: 0px;
+	width: 230px;
+	height: 100%;
+	border-left: 5px solid #7C5D91;
+	background: #D8BEE9;
+	font-size: 0px;
+}
+#game_buttons
+{
+	display: block;
+	margin-top: 180px;
+	padding: 5px;
+}
+#game_buttons input
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	height: 40px;
+	margin: 5px;
+	padding: 5px;
+	border: 3px solid #6c466d;
+	background: #9b6bba;
+	color: rgb(227, 216, 228);
+	font-family: Redressed;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+#game_buttons input:hover
+{
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+#game_buttons p
+{
+	margin-top: 10px;
+	text-align: center;
+	font-size: 40px;
+	color: #6c466d;
+}
+
+#game_buttons div
+{
+	text-align: center;
+	font-size: 32px;
+	color: #811E9A;
+ 	text-shadow: 1px 1px 2px #9b6bba;
+}
+
+#game_options
+{
+	margin: 10px;
+	text-align: center;
+}
+
+#game_options p
+{
+	margin-top: 10px;
+	padding-top: 20px;
+	border-top: 3px solid #6c466d;
+	text-align: center;
+	font-size: 32px;
+	color: #6c466d;
+}
+
+#game_options span
+{
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	border: 3px solid #6c466d;
+	border-radius: 50%;
+	background: #9b6bba;
+	color: rgb(227, 216, 228);
+	cursor: pointer;
+}
+
+#gameOptionSize3
+{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 10px;
+	font-size: 25px;
+}
+
+#gameOptionSize4
+{
+	width: 60px;
+	height: 60px;
+	line-height: 56px;
+	margin-top: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	font-size: 40px;
+}
+
+#gameOptionSize6
+{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 0px;
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+#gameOptionSize8
+{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 0px;
+	font-size: 30px;
+}
+
+#gameOptionSize10
+{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 30px;
+	font-size: 20px;
+}
+
+#game_options input
+{
+	display: block;
+	width: 208px;
+	height: 30px;
+	margin-top: 10px;
+	padding: 0px;
+	border: 1px solid #6c466d;
+	text-align: center;
+	font-size: 22px;
+	font-family: Redressed;
+	background: #f0f0f0;
+	color: #6c466d;
+}
+
+#mouseControls
+{
+	display: block;
+	position: fixed;
+	width: 160px;
+	bottom: 10px;
+	left: 250px;
+	font-size: 0px;
+}
+#mouseControls input
+{
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	border: 3px solid #6c466d;
+	background: #9b6bba;
+	color: rgb(227, 216, 228);
+	font-family: Redressed;
+	font-size: 20px;
+	cursor: pointer;
+}
+#topArrow
+{
+	display: block;
+	margin: auto;
+}
+#leftArrow
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+}
+#bottomArrow
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 5px;
+}
+#rightArrow
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+#mainDiv
+{
+	padding-top: 250px;
+}
+
+#gameDiv
+{
+	display: block;
+	position: relative;
+	width: 512px;
+	height: 512px;
+	margin: auto;
+	border: 2px solid #865787;
+	border-radius: 5px;
+	background: #865787;
+	font-size: 0px;
+}
+#gameDiv .cell
+{
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	width: 50px;
+	font-size: 3em;
+	height: 50px;
+	margin: 5px 0px 0px 5px;
+	border: 1px solid #f7e0ec;
+	border-radius: 3px;
+	background: rgba(227, 216, 228, 0.35);
+}
+
+#gameDiv .pawn
+{
+	display: block;
+	box-sizing: border-box;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #f7e0ec;
+	border-radius: 3px;
+	background: #622141;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ebb0cd;
+	text-align: center;
+	transition: all 0.2s;
+}
